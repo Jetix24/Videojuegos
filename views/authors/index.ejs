@@ -7,4 +7,9 @@
 <br>
 <% authors.forEach(author => { %>
     <div><%= author.name %></div>  
+    <a href="/authors/<%= author.id %>">Vista</a>
+    <a href="/authors/<%= author.id %>/edit">Editar</a>
+    <%- include('../partials/deleteForm',
+                  { url: `/authors/${author.id}` }) %>
+
 <% }) %>
