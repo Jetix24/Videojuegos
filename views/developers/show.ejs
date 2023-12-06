@@ -1,0 +1,13 @@
+<!-- Titulo de la interfaz con el nombre del desarrollador-->
+<h2 class="page-header"><%= developer.name %></h2>
+<!-- Estructura que define que acción se realizara -->
+<div class="btn-row">
+  <a class="btn btn-primary" href="/developers/<%= developer.id %>/edit">Editar</a>
+  <%- include('../partials/deleteForm',
+              { url: `/developers/${developer.id}` }) %>
+</div>
+<!-- Videojuegos desarollado por cada desarrolador-->
+<% if (videogamesByDeveloper.length > 0) { %>
+  <h2 class="page-header">Videojuegos Desarrollados</h2>
+  <%- include('../partials/videogameGrid', { videogames: videogamesByDeveloper }) %>
+<% } %>

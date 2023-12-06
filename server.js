@@ -9,8 +9,8 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
-const authorRouter = require('./routes/authors')
-const bookRouter = require('./routes/books')
+const developerRouter = require('./routes/developers')
+const videogameRouter = require('./routes/videogames')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views') //de donde viene el views
@@ -30,7 +30,7 @@ db.once('open', error => console.log('Conectado a Mongoose'))
 
 //ROUTES
 app.use('/', indexRouter)
-app.use('/authors', authorRouter)
-app.use('/books', bookRouter)
+app.use('/developers', developerRouter)
+app.use('/videogames', videogameRouter)
 
 app.listen(process.env.PORT || 3000)

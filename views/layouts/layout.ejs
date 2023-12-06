@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- API para subir una imagen -->
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
     <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <!-- Javascript de la API de la imagen -->
     <script defer src="/javascripts/fileUpload.js"></script>
+    <!-- Javascript del menu desplegable-->
+    <script defer src="/javascripts/script.js"></script>
+    <!-- Logo de la página-->
+    <link rel="shortcut icon" type="image/png" href="/Imagenes/Logo.png" />
     <link id="main-css" rel="stylesheet" href="/stylesheets/main.css">
-    <title>Pagina</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Vigzone</title>
 </head>
 <body>
-    <div class="container">
+     <!-- Estructura del menu desplegable-->
         <%- include('../partials/header.ejs') %>
+         <!-- Estructura que contendra todas las interfaces-->
         <div class="container">
             <%- include('../partials/errorMessage.ejs') %>
             <%- body %>
         </div>
-    </div>
+
 </body>
 </html>

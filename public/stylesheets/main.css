@@ -1,40 +1,51 @@
+/* Se comparten los css para así tener todos y solo importar uno al html. */
 @import 'shared/variables.css';
 @import 'shared/fonts.css';
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
-@import 'shared/author.css';
-@import 'shared/books.css';
+@import 'shared/developer.css';
+@import 'shared/videogame.css';
 
+/* La raíz permite definir parametros sin importar que tipo de objeto sean. */
 :root {
-  font-family: 'Poppins';
+  font-family: 'Rubik', sans-serif;
   font-size: 20px;
   color: var(--color-text-light);
 }
 
+/* Se utiliza para determinar calcular el tamaño total de un elemento.*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* Define el fondo de la interfaz.*/
 body {
-  background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+  background: linear-gradient(to right, var(--color-azul_100) , var(--color-azul_200) );
 }
 
+/* Define los parametros del div container que es lo que usaran todas las interfaces.*/
 .container {
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 3rem;
+  margin-left: 2%;
+  margin-top: 2%;
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 70px;
+  width: calc(100% - 130px);
+  transition: all .5s ease;
+  z-index: 2;
+  overflow-y: auto;  
 }
 
-.inner-container {
-  margin: 0 2rem;
-}
-
+/* Es el titulo de cada interfaz.*/
 .page-header {
-  font-size: 2rem;
-  font-weight: 500;
+  color:  #c00003;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3%;
 }
-
+/* Estilo de si sucede un error.*/
 .error-message {
   color: red;
 }

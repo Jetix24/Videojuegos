@@ -1,15 +1,22 @@
+/* Varaibles*/
 :root {
     --form-label-font-size: 1.2rem;
-    --form-input-background-color: hsl(var(--color-base-hue), 100%, 31%);
-    --form-input-border-color: hsl(var(--color-base-hue), 100%, 50%);
-    --form-input-border-color-light: hsl(var(--color-base-hue), 100%, 80%);
+    --color-azul_200: #0C0F24;
+      --color-azul_100: #212867;
+      --color-verde_100: #04B5A3;
+      --color-rosa_100: #FFA082;
+      --color-rojo_100: #CF1518;
+      --color-rojo_200: #690015;
+      --color-blanco: #ffffff;
+      --color-negro: #000000;
   }
-  
-  .form-row {
-    display: flex;
-    margin-bottom: .5rem;
+  /* Distribución de la tabla del formulario de videojuegos*/
+  table{
+    width: 100%;
+    height: 100%;
   }
-  
+
+  /* Distribución de los objetos del formulario*/
   .form-item {
     display: flex;
     flex-direction: column;
@@ -23,52 +30,74 @@
   }
   
   .form-item-no-grow {
-    flex-grow: 0;
+    display: flex;
   }
-  
-  .form-row-end {
-    justify-content: flex-end;
-  }
-  
+
+  /*Estilo del label del formulario*/
   .form-item > label {
     font-size: var(--form-label-font-size);
+    color: var(--color-verde_100);
     margin-bottom: .25rem;
     margin-left: .25rem;
   }
+
+  /* Distribución que se tiene en la portada de cada videojuego*/
+  .cover-tamaño{
+    margin-left: 10%;
+  }
   
+  /* Estilo de cada input, select o textarea*/
   .form-item input, .form-item select, .form-item textarea {
     height: 2rem;
     padding: .25rem .5rem;
     border-radius: .25rem;
-    border: 1px solid var(--form-input-border-color);
+    border: 1px solid #CF1518 ;
     font-size: 1rem;
-    font-weight: normal;
-    font-family: 'Poppins';
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
     outline: none;
+    transition: all .5s ease;
+    background: var(--color-rojo_100) ;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    opacity: .9;
+    color: var(--color-blanco);
+    
   }
-  
+  /* Tamaño del texarea*/
   .form-item textarea {
     height: 100%;
     resize: none;
   }
-    
+  /* Estilo al estar el mouse encima de input, select o textarea del formulario*/
+  .form-item input:hover, .form-item select:hover, .form-item textarea:hover {
+    border-color: var(--color-rojo_200);
+    background-color: var(--color-rojo_200);
+  }
+ /* Estilo al hace click encima de input, select o textarea del formulario*/
   .form-item input:focus, .form-item select:focus, .form-item textarea:focus {
-    border-color: var(--form-input-border-color-light);
+    border-color: var(--color-rojo_200);
   }
   
+
+  /* Estilo para el input en donde se carga la imagen*/
   .filepond--root {
-    font-family: 'Poppins';
+    font-family: 'Rubik', sans-serif;
     margin-bottom: 0;
   }
   
   .filepond--panel-root {
-    background-color: var(--form-input-background-color);
-    border: 1px solid var(--form-input-border-color);
+    background-color: var(--color-azul_200);
+    border: 10 px solid var(--color-negro);
+    height: 100%;
   }
   
   .filepond--drop-label {
-    color: var(--color-text-light);
+    color: var(--color-azul_100);
     font-size: inherit;
+    height: 100%;
   }
+
+
+
 
   

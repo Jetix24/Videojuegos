@@ -1,0 +1,11 @@
+<!-- Titulo de la interfaz -->
+<h2 class="page-header">Editar Desarrolladora</h2>
+<!--Manda el id del del desarrollador -->
+<form action="/developers/<%= developer.id %>?_method=PUT" method="POST">
+  <%- include('_form_fields') %>
+  <!-- Estructura para los botones-->
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/developers/<%= developer.id %>">Cancelar</a>
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+  </div>
+</form>

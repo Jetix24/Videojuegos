@@ -1,0 +1,35 @@
+ <!-- Titulo de la interfaz-->
+<h2 class="page-header">Buscar Videojuego</h2>
+ <!-- Fromulario de busqueda de videojuegos-->
+<form action="/videogames" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Titulo</label>
+      <input type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="form-row">
+          <div class="form-item">
+            <label>Publicado despues de:</label>
+            <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="form-item">
+          <label>Publicado antes de:</label>
+          <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+        </div>
+      </td>
+    </tr>
+  </table>
+ 
+  <div class="form-row">
+    <button class="btn btn-buscar btn-primary btn-buscar" type="submit">Buscar</button>
+  </div>
+</form>
+<br>
+<%- include('../partials/videogameGrid', { videogames: videogames, large: true }) %>

@@ -1,11 +1,11 @@
 {
-  "name": "biblioteca",
+  "name": "tienda",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "inicia": "nodemon server.js"
+    "arre": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

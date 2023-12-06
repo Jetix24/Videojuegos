@@ -1,0 +1,27 @@
+<!-- Titulo de la interfaz -->
+<h2 class="page-header">Buscar Desarrolladora</h2>
+<!-- El formulario guarda la opción de obtener las datos ingresados en el input -->
+<form action="/developers" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Nombre</label>
+      <input type="text" name="name" value="<%= searchOptions.name %>">
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary btn-buscar" type="submit">Buscar</button>
+  </div>
+</form>
+<br>
+<!-- Manda a llamar los registros de developer y hace una estructura para cada desarrollador -->
+<% developers.forEach(developer => { %>
+  <div class="developer-row">
+    <div class="developer-name"><%= developer.name %></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/developers/<%= developer.id %>">Ver</a>
+      <a class="btn btn-primary" href="/developers/<%= developer.id %>/edit">Editar</a>
+      <%- include('../partials/deleteForm',
+                  { url: `/developers/${developer.id}` }) %>
+    </div>
+  </div>
+<% }) %>

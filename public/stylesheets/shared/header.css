@@ -1,46 +1,198 @@
-:root {
-    --nav-title-font-size: 3rem;
-    --nav-title-font-weight: bold;
-    --nav-link-font-weight: 300;
-  }
-  
-  .header-title {
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-size: var(--nav-title-font-size);
-    font-weight: var(--nav-title-font-weight);
-  }
-  
-  .header-nav {
+/* Varaibles*/
+:root{
+    --color-azul_200: #0C0F24;
+    --color-azul_100: #212867;
+    --color-verde-100: #04B5A3;
+    --color-rosa-100: #FFA082;
+    --color-rojo_100: #CF1518;
+    --color-rojo_200: #690015;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
+}
+/* Todos los objetos tendran estas características*/
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+   font-family: 'Rubik', sans-serif;
+}
+
+/* Tamaño del logo del menu*/
+#logo {
+  width: 50px; 
+  height: auto; 
+  margin: -1px;
+}
+
+/* Estilo de los iconos del menu*/
+.img-menu{
+  width: 40px; 
+  height: auto; 
+}
+
+/* Estilo y distribución del menu desplegable*/
+.sidebar{
+    min-height: 100vh;
+    width: 80px;
+    padding: 6px 14px;
+    z-index: 99;
+    background-color: var(--color-azul_200);
+    transition: all .5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Estilo al agregar el parametro open*/
+.sidebar.open{
+    width: 250px;
+}
+
+/* Estilo de los logos*/
+.sidebar .logo_details{
+    height: 60px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .header-nav ul {
+    position: relative;
+}
+
+
+.sidebar .logo_details .icon{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+/* Nombre de cada uno de las opciones del menu*/
+.sidebar .logo_details .logo_name{
+    color: var(--color-blanco);
+    font-size: 30px;
+    font-weight: 600;
+    opacity: 0;
+    margin: 15px;
+    transition: all .5s ease;
+}
+.sidebar.open .logo_details .icon, .sidebar.open .logo_details .logo_name{
+    opacity: 1;
+}
+
+/* Estilo de los botones en el menu desplegable*/
+.sidebar .logo_details #btn{
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%);
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.sidebar.open .logo_details #btn{
+    text-align: right;
+
+}
+/* Tamaño del icono*/
+.sidebar i{
+    color: var(--color-blanco);
+    width: 10px;
+    height: auto;
+    line-height: 60px;
+    min-width: 30px;
+    margin: 10px 15px ;
+}
+
+/* Distribución de las imagenes*/
+.sidebar img{
+    width: 30px;
+    height: auto;
+    line-height: 60px;
+    min-width: 30px;
+    margin: 10px 15px ;
+}
+
+/* Distribución de los campos del menu*/
+.sidebar .nav-list{
+    margin-top: 20px;
+    height: 100%;
+}
+.sidebar li{
+    position: relative;
+    margin: 8px -4px;
+    list-style: none;
+}
+
+/* Label que aparace en el menu desplegable al estar cerrado*/
+.sidebar li .tooltip{
+    position: absolute;
+    top: 10px;
+    left: calc(100% + 20px);
+    z-index: 3;
+    background-color: var(--color-rojo_100);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 4px 14px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    color: var(--color-blanco);
+}
+
+.sidebar li:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 30%;
+    transform: translate(-10%);
+}
+
+.sidebar.open li .tooltip{
+    display: none;
+}
+
+/* Estilo de los urls*/
+.sidebar li a{
     display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav li {
-    list-style: none; /*quitar puntos*/
-  }
-  
-  .header-nav li a {
+    height: 100%;
+    width: 100%;
+    align-items: center;
     text-decoration: none;
-    color: var(--color-text-light);
-    font-weight: var(--nav-link-font-weight);
-    padding: 1rem;
-    transform: scale(1.1);
-  }
-  
-  .header-nav li a:hover, .header-title:hover {
-    color: white;
-  }
-  .header-nav li:hover {
-    color: white;
-    transform: scale(1.1);
-  }
+    background-color: var(--color-azul_200);
+    position: relative;
+    transition: all .5s ease;
+    z-index: 12;
+}
+
+.sidebar li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+    z-index: -2;
+}
+
+.sidebar li a:hover::after{
+    transform: scaleX(1);
+    color: var(--color-azul_200);
+}
+
+.sidebar li a .link_name{
+    color: var(--color-verde_100);
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.open li a .link_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+

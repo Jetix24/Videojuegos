@@ -1,143 +1,143 @@
-/* Poppins - Black */
+/* Rubik - Black */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Black.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
-/* Poppins - Black Italic */
+/* Rubik - Black Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-BlackItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
 
-/* Poppins - Bold */
+/* Rubik - Bold */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
-/* Poppins - Bold Italic */
+/* Rubik - Bold Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
-/* Poppins - Extra Bold */
+/* Rubik - Extra Bold */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
-/* Poppins - Extra Bold Italic */
+/* Rubik - Extra Bold Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-ExtraBoldItalic.ttf') format('truetype');
     font-weight: 800;
     font-style: italic;
 }
 
-/* Poppins - Extra Light */
+/* Rubik - Extra Light */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-ExtraLight.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
-/* Poppins - Extra Light Italic */
+/* Rubik - Extra Light Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-ExtraLightItalic.ttf') format('truetype');
     font-weight: 200;
     font-style: italic;
 }
 
-/* Poppins - Italic */
+/* Rubik - Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Italic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
-/* Poppins - Light */
+/* Rubik - Light */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Light.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
-/* Poppins - Light Italic */
+/* Rubik - Light Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-LightItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }
 
-/* Poppins - Medium */
+/* Rubik - Medium */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
-/* Poppins - Medium Italic */
+/* Rubik - Medium Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
 }
 
-/* Poppins - Regular */
+/* Rubik - Regular */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* Poppins - Semi Bold */
+/* Rubik - Semi Bold */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
-/* Poppins - Semi Bold Italic */
+/* Rubik - Semi Bold Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-SemiBoldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
 }
 
-/* Poppins - Thin */
+/* Rubik - Thin */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Thin.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
-/* Poppins - Thin Italic */
+/* Rubik - Thin Italic */
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-ThinItalic.ttf') format('truetype');
+    font-family: 'Rubik', sans-serif;
+    src: url('/fonts/Rubik-ThinItalic.ttf') format('truetype');
     font-weight: 100;
     font-style: italic;
 }

@@ -1,0 +1,70 @@
+ <!-- Estrucutra para el formulario para agregar o edtiar un videojuego-->
+<table>
+  <tr>
+    <td>
+      <div class="form-row">
+        <div class="form-item">
+          <label>Titulo</label>
+          <input type="text" name="title" value="<%= videogame.title %>">
+        </div>
+        </div>
+    </td>
+    <td rowspan="5">
+      <div class="cover-tamaño">
+        <div class="form-item form-item-no-grow">
+          <label>Cubierta</label>
+          <input type="file" name="cover" class="videogame-cover filepond">
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-row">
+        <div class="form-item">
+          <label>Desarrolladora</label>
+          <select name="developer">
+            <% developers.forEach(developer => { %>
+              <% if (developer.id === videogame.developer) { %>
+                <option selected label="<%= developer.name %>" value="<%= developer.id %>">
+              <% } else { %>
+                <option label="<%= developer.name %>" value="<%= developer.id %>">
+              <% } %>
+            <% }) %>
+          </select>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-row">
+        <div class="form-item">
+          <label>Fecha de publicación</label>
+          <input type="date" name="publishDate"
+                value="<%= videogame.publishDate == null ? '' : videogame.publishDate.toISOString().split('T')[0] %>">
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-row">
+        <div class="form-item">
+          <label>Tamaño</label>
+          <input type="number" name="size" min="1" value="<%= videogame.size %>">
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="form-row">
+        <div class="form-item">
+          <label>Descripción</label>
+          <textarea name="description"><%= videogame.description %></textarea>
+          </div>
+        </div>
+    </td>
+  </tr>
+</table>

@@ -1,57 +1,76 @@
+/* Define los estilos de cada uno de los botones.*/
 :root {
-    --color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
-    --color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 73%);
-    --color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
-    --color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
-    --color-btn-border: black;
-    --color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 83%);
-    --color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
-    --color-btn-danger-text: black;
-    --color-btn-danger-text-dark: black;
+    --color-azul_200: #0C0F24;
+    --color-azul_100: #212867;
+    --color-verde_100: #04B5A3;
+    --color-rosa_100: #FFA082;
+    --color-rojo_100: #CF1518;
+    --color-rojo_200: #690015;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
   }
   
+  /* Clase general de los botones.*/
   .btn {
-    border: 1px solid var(--color-btn-border);
+    border: 2px solid var(--color-verde_100);
     border-radius: .5rem;
     padding: .5rem 1rem;
     margin-top: .5rem;
     margin-bottom: .5rem;
     font-size: 1rem;
-    font-family: 'Poppins';
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
   
+  /* Define en que posición se encontran los botones.*/
   .btn-row {
     display: flex;
     align-items: flex-start;
   }
   
+  /* Proporciona un margen.*/
   .btn-row > * {
     margin-left: 10px;
   }
   
+  /* Proporciona un margen.*/
   .btn-row > *:first-child {
     margin-left: 0;
   }
   
+  /* Los botones primarios tendran un color verde.*/
   .btn-primary {
-    color: var(--color-btn-primary-text);
-    background-color: var(--color-btn-primary-background);
+    color: var(--color-blanco);
+    background-color: var(--color-verde_100);
+    opacity: .8;
+    transition: all .5s ease;
   }
-  
+  /* Al estar encima de un boton primario cambiara.*/
   .btn-primary:hover {
-    color: var(--color-btn-primary-text-dark);
-    background-color: var(--color-btn-primary-background-dark);
+    opacity: 1;
   }
-  
+   /* Los botones primarios tendran un color rojo.*/
   .btn-danger {
-    color: var(--color-btn-danger-text);
-    background-color: var(--color-btn-danger-background);
+    border: 2px solid var(--color-rojo_100);
+    color: var(--color-blanco);
+    background-color: var(--color-rojo_100);
+    opacity: .8;
+    transition: all .5s ease;
   }
-  
+  /* Al estar encima de un boton secundario cambiara.*/
   .btn-danger:hover {
-    color: var(--color-btn-danger-text-dark);
-    background-color: var(--color-btn-danger-background-dark);
+    opacity: 1;
+  }
+
+  /* El botón de buscar ocupara todo el espacio en ancho.*/
+  .btn-buscar{
+    width: 100%;
+  }
+  /* El botón de editar ocupara todo el espacio en ancho.*/
+  .btn-editar{
+    width: 100%;
   }

@@ -1,0 +1,24 @@
+ <!-- Titulo de la interfaz-->
+<h2 class="page-header"><%= videogame.title %></h2>
+ <!-- Estructura que muestra la portada del videojuego-->
+<div class="videogame-details">
+  <div>
+    <img class="videogame-cover" src="<%= videogame.coverImagePath %>">
+    <div class="videogame-details-btn-grid">
+      <a class="btn btn-primary btn-editar" href="/videogames/<%= videogame.id %>/edit">Editar</a>
+      <%- include('../partials/deleteForm', { url: `/videogames/${videogame.id}` }) %>
+      <a class="btn btn-primary videogame-details-developer-button" href="/developers/<%= videogame.developer.id %>">Ver Desarrolladora</a>
+    </div>
+  </div>
+  <!-- Estructura que muestra los detalles del videojuego -->
+  <div class="videogame-details-grid">
+    <div class="videogame-details-label">Desarrolladora:</div>
+    <div><%= videogame.developer.name %></div>
+    <div class="videogame-details-label">Fecha de publicación:</div>
+    <div><%= videogame.publishDate.toDateString() %></div>
+    <div class="videogame-details-label">Tamaño:</div>
+    <div><%= videogame.size %></div>
+    <div class="videogame-details-label">Descripción:</div>
+    <div><%= videogame.description %></div>
+  </div>
+</div>

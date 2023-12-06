@@ -1,0 +1,10 @@
+ <!-- Titulo de la interfaz-->
+<h2 class="page-header">Nuevo Videojuego</h2>
+ <!-- Formulario para crear un videojuego y agregar el bóton cancelar y crear-->
+<form action="/videogames" method="POST">
+  <%- include('_form_fields') %>
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/videogames">Cancalar</a>
+    <button class="btn btn-primary" type="submit">Crear</button>
+  </div>
+</form>

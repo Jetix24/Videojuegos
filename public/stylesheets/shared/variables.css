@@ -1,8 +1,9 @@
 :root {
-    --color-base-hue: 300;
-    --color-danger-hue-offset: 180;
-    --color-danger-hue: calc(var(--color-base-hue) - var(--color-danger-hue-offset));
-    --color-background-dark: hsl(var(--color-base-hue), 100%, 8%);
-    --color-background-light: hsl(var(--color-base-hue), 100%, 16%);
-    --color-text-light: hsl(var(--color-base-hue), 100%, 87%);
+      --color-azul_200: #0C0F24;
+      --color-azul_100: #212867;
+      --color-verde_100: #04B5A3;
+      --color-rojo_100: #CF1518;
+      --color-rojo_200: #690015;
+      --color-blanco: #ffffff;
+      --color-negro: #000000;
   }

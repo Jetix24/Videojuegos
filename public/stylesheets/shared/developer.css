@@ -1,0 +1,11 @@
+/* Distribución de los formularios*/
+.developer-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Estilo del titulo de cada desarrollador*/
+  .developer-name {
+    font-size: 1.5rem;
+    color: #04B5A3;
+    font-weight: 600;
+  }

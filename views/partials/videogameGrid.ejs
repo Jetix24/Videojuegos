@@ -1,0 +1,10 @@
+ <!-- Estructura de las portadas de cada uno de los videojuegos-->
+<% videogameCoverClass = locals.large ? 'videogame-cover-large' : '' %>
+<% videogameGridClass = locals.large ? 'videogame-grid-large' : '' %>
+<div class="videogame-grid <%= videogameGridClass %>">
+  <% videogames.forEach(videogame => { %>
+    <a href="/videogames/<%= videogame.id %>">
+      <img class="videogame-cover <%= videogameCoverClass %>" src="<%= videogame.coverImagePath %>">
+    </a>
+  <% }) %>
+</div>

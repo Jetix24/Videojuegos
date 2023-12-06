@@ -1,15 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const Book = require('../models/book')
+const Videogame = require('../models/videogame')
 
+// Ruta para llegar al index general.
 router.get('/', async (req, res) => {
-    let books
+    let videogames
     try{
-        books= await Book.find().sort({createdAt: 'desc'}).limit(10).exec()
+        videogames= await Videogame.find().sort({createdAt: 'desc'}).limit(10).exec()
     }catch{
-        books = []
+        videogames = []
     }
-    res.render('index', {books: books})
+    res.render('index', {videogames: videogames})
 })
 
 module.exports = router
